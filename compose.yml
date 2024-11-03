@@ -1,9 +1,12 @@
 services:
   img:
     build: .
+    image: basicapp
     container_name: basic-container
     ports:
-      - "5500:5500"
+      - "8080:5500"
     volumes:
       - .:/app               # Mounts the entire app for hot-reloading
+      - /app/node_modules
+      
   
